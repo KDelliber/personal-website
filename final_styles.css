@@ -1,0 +1,298 @@
+﻿@charset "utf-8";
+
+/*
+
+      Author: Kenneth Delliber
+      Date:   9:29 AM 11/14/2022
+
+      Filename:  final_styles.css
+	  
+	  All art by: Dominic Delliber
+
+*/
+/* HTML and Body Styles */
+html {
+	background-image: url(Sunny_background.png);
+	background-color: black;	
+	background-position: fill;
+	background-repeat: repeat;
+}
+
+h1, h2 {
+	font-family: papyrus, sans-serif;
+	letter-spacing: 0.1em;
+	color:white;
+	font-style:italic;
+	} 
+header{
+	border-bottom:5px ridge silver;
+
+}
+a {
+	text-align: left;
+	font-weight: bold;
+	font-family:papyrus;
+	font-size: 3em;
+	line-height: 0.8em;
+	color:white;
+}
+/* Aside, Article and Section Styles */
+
+
+body {
+	color: rgb(91, 91, 91); 
+	background-color:black;
+	border:25px ridge silver;
+	font-family: papyrus, sans-serif; 
+	border-radius:35px;
+	background-image: url(Starry_City_Night_background.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* Heading Styles */
+h1 {font-size: 2.0em; }
+h2 {font-size: 1.5em; 
+	margin-top:10px;
+}
+article {
+	background-image: url(Castle_background.png);
+	text-align:center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size:1.5em;
+} 
+
+aside  {
+	font-family:"rage italic";
+	background-image: url(Planet_Popstar_background.png);
+	border:5px inset silver;
+	border-radius:25px;
+	color: white; 
+	margin: 20px 5px; 
+	margin-right:25px;
+	padding-right:20px;
+	font-size: 1.45em;
+	text-shadow: rgba(0, 0, 0, 1) 3px -1px 1px; 
+	width:220px;
+
+	text-align:center;
+	padding: 5px 5px 5px 15px;
+	font-family:"Segoe Script", sans-serif;
+	margin: 20px;
+	font: normal bold 1.0em/5em 
+		"Segoe Script", sans-serif;
+
+}
+aside h1{
+		text-shadow: black 3px -1px 1px; 
+	font-size:3.0em;
+	font-family:"rage italic";	
+}
+aside li{
+	font-size:1.70em;
+	text-align:left;
+	font-family:papyrus;
+}
+section {
+	border: 5px inset white;
+	background-image: url(Sunny_background.png);
+	color:purple;
+	text-align:center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align:center;
+	font-size:3em;
+	padding-bottom:35px;
+	border-radius: 15px 15px 0px 0px;
+} 
+#custInfo{
+		font-size:35px;
+}
+section  ul  li{
+		font-size:2.4em;
+}
+section img{
+	padding:55px;
+}
+article{
+	border:5px inset silver;
+	border-radius:50px;
+	color:white;
+	text-shadow: purple 3px -1px 1px; 
+}
+
+/* Navigation Styles */	
+.horizontal a {
+	color: silver; 
+	font-size: 3.2em; 
+	letter-spacing: 0em;
+	line-height:45px;
+	text-shadow: rgba(0, 0, 0, 1) 1px -1px 1px; 
+	transition:color 1.5s ease-in 0.5s,
+			   font-size 2s ease,
+			   letter-spacing 2s ease-out,
+			   text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
+		}
+.horizontal a:hover { 
+	color: black; 
+	font-size: 5em;
+	letter-spacing: 0.1em; 
+	text-shadow: rgba(0, 0, 0, 0.5) 15px -3px 8px; 
+	} 
+.vertical a {
+	color: black; 
+	font-size: 2.0em; 
+	letter-spacing: 0em;
+	text-shadow: rgba(0, 0, 0, 1) 1px -1px 1px; 
+	transition:color 1.5s ease-in 0.5s,
+			   font-size 2s ease,
+			   letter-spacing 2s ease-out,
+			   text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
+
+		}
+.vertical a:hover { 
+	color: black; 
+	font-size: 3em;
+	letter-spacing: 0.1em; 
+	text-shadow: rgba(0, 0, 0, 0.5) 15px -3px 8px; 
+	} 
+
+nav{
+	color:white;
+	background-color:transparent;
+}
+nav.horizontal{
+	font-size: 0.7em; 
+	letter-spacing: 0em;
+	text-shadow: rgba(0, 0, 0, 1) 3px -1px 1px; 
+	padding:10px;
+	background-image:url(footer_background.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align:center;
+	border:10px ridge silver;	
+	border-radius:15px;
+	
+}
+nav.vertical{
+	letter-spacing: 0em;
+	text-shadow: rgba(0, 0, 0, 1) 3px -1px 1px; 
+	background-image: url(Planet_Popstar_background.png);
+	border:5px ridge silver;
+	border-radius:25px;
+	padding:13px;
+	width:220px;
+	font-size:0.375em;
+}
+nav.vertical h1{
+		text-shadow:black 3px -1px 1px;
+	color:white;
+	font-family:"Segoe Script", sans-serif;
+	font-size:5em;	
+	line-height:75px;
+	
+
+}
+nav > ol{
+	list-style-type: "\1F44D";
+	text-align:left;
+	padding: 5px 5px 5px 15px;
+	font-family:"Segoe Script", sans-serif;
+	margin: 20px;
+	font: normal bold 2.7em/5em 
+		"Segoe Script", sans-serif;
+
+}
+
+nav {
+	font-size: 1.5em; 
+} 
+nav > ul {
+	line-height: 1em;
+	list-style-type: none; 
+	padding-left: 5px;
+	padding-top:5px;	 
+	
+}
+nav > ul > li > a:link, nav > ul > li > a:visited {
+	color:white;
+	text-decoration: none;
+}
+nav > ul > li > a:hover, nav > ul > li > a:active {
+	color: black;
+	text-decoration: none;
+	background-color:transparent;
+	padding:10px;
+} 
+nav > ol > li > a:link, nav > ol > li > a:visited {
+	color:white;
+	text-decoration: none;
+}
+nav > ol > li > a:hover, nav > ol > li > a:active {
+	color: black;
+	text-decoration: underline;
+	background-color:transparent;
+	padding:10px;
+} 
+/* Table Styles */
+
+.foods{
+	text-shadow: rgba(0, 0, 0, 1) 1px -1px 1px;
+	float:left;
+	width:100%;
+	border-collapse:collapse;
+	font-family:papyrus, sans-serif;
+	font-size:45px;
+	color:purple;
+	border:15px ridge silver;
+	text-align:center;
+}
+tr{
+	height:25px;
+
+}
+th, td{
+	font-family:"algerian regular";
+	border:5px outset silver;
+	color:white;
+	padding:5px;	
+	font-size:35px;
+	color:purple;
+}
+/*Form Styles*/
+div.formRow {
+		font-family:sans-serif;
+	display: flex; 
+	flex-flow: row wrap;
+	margin: 15px 10px ;
+	text-align:left;
+}
+div.formRow > * { 
+	flex: 1 1 150px; 
+
+}
+textarea {
+	margin-top: 10px; 
+	height: 100px; 
+	width: 95%;
+} 
+
+
+/* Footer Styles */
+footer  {
+	background-image:url(footer_background.png);
+	background-color: rgb(222,128,60); 
+	color: white; 
+	font: normal small-caps bold 1.2em/2em
+		papyrus, sans-serif;
+	text-align: center; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align:center;
+	border-top:5px ridge silver;
+}
