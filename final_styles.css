@@ -296,3 +296,189 @@ footer  {
 	text-align:center;
 	border-top:5px ridge silver;
 }
+
+
+/* Responsive presentation */
+body {
+	max-width: 1500px;
+	margin: 0 auto;
+	overflow-wrap: break-word;
+}
+
+article,
+section,
+aside,
+nav {
+	min-width: 0;
+}
+
+article {
+	padding: 16px;
+}
+
+section img {
+	max-width: 100%;
+	height: auto;
+	padding: 20px;
+}
+
+input,
+textarea,
+select,
+button {
+	max-width: 100%;
+	font: inherit;
+}
+
+@media (max-width: 800px) {
+	html {
+		background-size: cover;
+	}
+
+	body {
+		margin: 0;
+		padding: 6px;
+		border-width: 6px;
+		border-radius: 0;
+		background-attachment: scroll;
+	}
+
+	header {
+		border-bottom-width: 3px;
+	}
+
+	nav.horizontal {
+		padding: 6px;
+		border-width: 4px;
+	}
+
+	.horizontal a,
+	.horizontal a:hover {
+		display: block;
+		padding: 10px 4px;
+		font-size: 1.15rem;
+		line-height: 1.25;
+		letter-spacing: 0;
+		text-shadow: rgba(0, 0, 0, 0.9) 1px 1px 2px;
+	}
+
+	article {
+		padding: 14px;
+		border-width: 3px;
+		border-radius: 18px;
+		font-size: 1.05rem;
+	}
+
+	h1 {
+		font-size: 1.65rem;
+	}
+
+	h2 {
+		font-size: 1.3rem;
+	}
+
+	aside,
+	nav.vertical {
+		width: auto;
+		margin: 0;
+		padding: 14px;
+		border-width: 3px;
+		border-radius: 16px;
+		font-size: 1rem;
+	}
+
+	aside h1,
+	nav.vertical h1 {
+		margin: 0 0 10px;
+		font-size: 1.6rem;
+		line-height: 1.3;
+	}
+
+	aside ul,
+	nav.vertical ol {
+		margin: 0;
+		padding-left: 28px;
+	}
+
+	aside li,
+	nav.vertical li {
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	.vertical a,
+	.vertical a:hover {
+		font-size: 1rem;
+		line-height: 1.5;
+		letter-spacing: 0;
+	}
+
+	section {
+		padding: 14px;
+		border-width: 3px;
+		font-size: 1.1rem;
+		overflow-x: auto;
+	}
+
+	section img {
+		display: block;
+		margin: 0 auto;
+		padding: 8px;
+	}
+
+	.foods {
+		display: block;
+		width: 100%;
+		min-width: 650px;
+		overflow-x: auto;
+		border-width: 5px;
+		font-size: 1rem;
+	}
+
+	th,
+	td {
+		padding: 6px;
+		border-width: 2px;
+		font-size: 0.9rem;
+	}
+
+	#custInfo {
+		padding: 8px;
+		font-size: 1rem;
+	}
+
+	div.formRow {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 5px;
+		margin: 12px 0;
+	}
+
+	div.formRow > * {
+		width: 100%;
+		min-width: 0;
+	}
+
+	footer {
+		padding: 12px 8px;
+		font-size: 0.9rem;
+		line-height: 1.6;
+		border-top-width: 3px;
+	}
+}
+
+@media (max-width: 480px) {
+	.horizontal a,
+	.horizontal a:hover {
+		font-size: 1rem;
+	}
+
+	article,
+	section {
+		padding: 10px;
+	}
+
+	.foods {
+		min-width: 560px;
+	}
+}
