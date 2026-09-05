@@ -1,484 +1,262 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 
-/*
-
-      Author: Kenneth Delliber
-      Date:   9:29 AM 11/14/2022
-
-      Filename:  final_styles.css
-	  
-	  All art by: Dominic Delliber
-
-*/
-/* HTML and Body Styles */
+/* Visual system for the Delliber family site. All original artwork by Dominic Delliber. */
+:root {
+  --ink: #f8f7ff;
+  --muted: #d8d5e8;
+  --line: rgba(255, 255, 255, .24);
+  --cyan: #6ef5ef;
+  --violet: #b99cff;
+  --shadow: 0 18px 55px rgba(0, 0, 0, .38);
+  color-scheme: dark;
+}
 html {
-	background-image: url(Sunny_background.png);
-	background-color: black;	
-	background-position: fill;
-	background-repeat: repeat;
+  scroll-behavior: smooth;
+  background: #070817 url("Starry_City_Night_background.png") center top / cover fixed;
 }
-
-h1, h2 {
-	font-family: papyrus, sans-serif;
-	letter-spacing: 0.1em;
-	color:white;
-	font-style:italic;
-	} 
-header{
-	border-bottom:5px ridge silver;
-
+body {
+  color: var(--ink);
+  background: linear-gradient(160deg, rgba(8, 10, 26, .93), rgba(30, 12, 48, .91));
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+  font-family: "Segoe UI", Inter, Arial, sans-serif;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
 }
+header {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #090b1c;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .28);
+}
+header img { width: 100%; }
+h1, h2, caption, legend {
+  margin-top: 0;
+  color: #fff;
+  font-family: Papyrus, "Segoe Print", cursive;
+  line-height: 1.2;
+  text-shadow: 0 2px 14px rgba(185, 156, 255, .48);
+}
+h1 { font-size: clamp(1.75rem, 4vw, 2.55rem); }
+h2 { font-size: clamp(1.25rem, 2.5vw, 1.65rem); }
+p { margin: 0 0 1rem; color: var(--muted); }
 a {
-	text-align: left;
-	font-weight: bold;
-	font-family:papyrus;
-	font-size: 3em;
-	line-height: 0.8em;
-	color:white;
+  color: var(--cyan);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
-/* Aside, Article and Section Styles */
-
-
-body {
-	color: rgb(91, 91, 91); 
-	background-color:black;
-	border:25px ridge silver;
-	font-family: papyrus, sans-serif; 
-	border-radius:35px;
-	background-image: url(Starry_City_Night_background.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+a:hover, a:focus-visible { color: #fff; }
+:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+nav.horizontal {
+  position: sticky;
+  top: 8px;
+  z-index: 10;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(7, 9, 24, .93) url("footer_background.png") center / cover;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .3);
+  backdrop-filter: blur(12px);
 }
-/* Heading Styles */
-h1 {font-size: 2.0em; }
-h2 {font-size: 1.5em; 
-	margin-top:10px;
+.refresh-story {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(120deg, rgba(110, 245, 239, .11), rgba(255, 120, 209, .11));
 }
-article {
-	background-image: url(Castle_background.png);
-	text-align:center;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	font-size:1.5em;
-} 
-
-aside  {
-	font-family:"rage italic";
-	background-image: url(Planet_Popstar_background.png);
-	border:5px inset silver;
-	border-radius:25px;
-	color: white; 
-	margin: 20px 5px; 
-	margin-right:25px;
-	padding-right:20px;
-	font-size: 1.45em;
-	text-shadow: rgba(0, 0, 0, 1) 3px -1px 1px; 
-	width:220px;
-
-	text-align:center;
-	padding: 5px 5px 5px 15px;
-	font-family:"Segoe Script", sans-serif;
-	margin: 20px;
-	font: normal bold 1.0em/5em 
-		"Segoe Script", sans-serif;
-
+.refresh-story h1 { margin: 0 0 6px; font-size: clamp(1.35rem, 3vw, 1.9rem); }
+.refresh-story p { margin: 0; }
+.refresh-story .eyebrow {
+  margin-bottom: 5px;
+  color: var(--cyan);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
-aside h1{
-		text-shadow: black 3px -1px 1px; 
-	font-size:3.0em;
-	font-family:"rage italic";	
+.view-switch { display: flex; flex: 0 0 auto; gap: 8px; }
+.view-switch button {
+  width: auto;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-size: .85rem;
+  font-weight: 750;
 }
-aside li{
-	font-size:1.70em;
-	text-align:left;
-	font-family:papyrus;
+.view-switch button.active {
+  border-color: transparent;
+  background: linear-gradient(135deg, #7250e8, #ce4398);
 }
-section {
-	border: 5px inset white;
-	background-image: url(Sunny_background.png);
-	color:purple;
-	text-align:center;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	text-align:center;
-	font-size:3em;
-	padding-bottom:35px;
-	border-radius: 15px 15px 0px 0px;
-} 
-#custInfo{
-		font-size:35px;
-}
-section  ul  li{
-		font-size:2.4em;
-}
-section img{
-	padding:55px;
-}
-article{
-	border:5px inset silver;
-	border-radius:50px;
-	color:white;
-	text-shadow: purple 3px -1px 1px; 
-}
-
-/* Navigation Styles */	
 .horizontal a {
-	color: silver; 
-	font-size: 3.2em; 
-	letter-spacing: 0em;
-	line-height:45px;
-	text-shadow: rgba(0, 0, 0, 1) 1px -1px 1px; 
-	transition:color 1.5s ease-in 0.5s,
-			   font-size 2s ease,
-			   letter-spacing 2s ease-out,
-			   text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
-		}
-.horizontal a:hover { 
-	color: black; 
-	font-size: 5em;
-	letter-spacing: 0.1em; 
-	text-shadow: rgba(0, 0, 0, 0.5) 15px -3px 8px; 
-	} 
-.vertical a {
-	color: black; 
-	font-size: 2.0em; 
-	letter-spacing: 0em;
-	text-shadow: rgba(0, 0, 0, 1) 1px -1px 1px; 
-	transition:color 1.5s ease-in 0.5s,
-			   font-size 2s ease,
-			   letter-spacing 2s ease-out,
-			   text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
-
-		}
-.vertical a:hover { 
-	color: black; 
-	font-size: 3em;
-	letter-spacing: 0.1em; 
-	text-shadow: rgba(0, 0, 0, 0.5) 15px -3px 8px; 
-	} 
-
-nav{
-	color:white;
-	background-color:transparent;
+  display: flex;
+  min-height: 62px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: .94rem;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
-nav.horizontal{
-	font-size: 0.7em; 
-	letter-spacing: 0em;
-	text-shadow: rgba(0, 0, 0, 1) 3px -1px 1px; 
-	padding:10px;
-	background-image:url(footer_background.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	text-align:center;
-	border:10px ridge silver;	
-	border-radius:15px;
-	
+.horizontal a:hover, .horizontal a:focus-visible, .horizontal a[aria-current="page"] {
+  transform: translateY(-2px);
+  border-color: rgba(110, 245, 239, .55);
+  background: rgba(255, 255, 255, .12);
 }
-nav.vertical{
-	letter-spacing: 0em;
-	text-shadow: rgba(0, 0, 0, 1) 3px -1px 1px; 
-	background-image: url(Planet_Popstar_background.png);
-	border:5px ridge silver;
-	border-radius:25px;
-	padding:13px;
-	width:220px;
-	font-size:0.375em;
+article, aside, nav.vertical, section {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 14px 38px rgba(0, 0, 0, .3);
 }
-nav.vertical h1{
-		text-shadow:black 3px -1px 1px;
-	color:white;
-	font-family:"Segoe Script", sans-serif;
-	font-size:5em;	
-	line-height:75px;
-	
-
-}
-nav > ol{
-	list-style-type: "\1F44D";
-	text-align:left;
-	padding: 5px 5px 5px 15px;
-	font-family:"Segoe Script", sans-serif;
-	margin: 20px;
-	font: normal bold 2.7em/5em 
-		"Segoe Script", sans-serif;
-
-}
-
-nav {
-	font-size: 1.5em; 
-} 
-nav > ul {
-	line-height: 1em;
-	list-style-type: none; 
-	padding-left: 5px;
-	padding-top:5px;	 
-	
-}
-nav > ul > li > a:link, nav > ul > li > a:visited {
-	color:white;
-	text-decoration: none;
-}
-nav > ul > li > a:hover, nav > ul > li > a:active {
-	color: black;
-	text-decoration: none;
-	background-color:transparent;
-	padding:10px;
-} 
-nav > ol > li > a:link, nav > ol > li > a:visited {
-	color:white;
-	text-decoration: none;
-}
-nav > ol > li > a:hover, nav > ol > li > a:active {
-	color: black;
-	text-decoration: underline;
-	background-color:transparent;
-	padding:10px;
-} 
-/* Table Styles */
-
-.foods{
-	text-shadow: rgba(0, 0, 0, 1) 1px -1px 1px;
-	float:left;
-	width:100%;
-	border-collapse:collapse;
-	font-family:papyrus, sans-serif;
-	font-size:45px;
-	color:purple;
-	border:15px ridge silver;
-	text-align:center;
-}
-tr{
-	height:25px;
-
-}
-th, td{
-	font-family:"algerian regular";
-	border:5px outset silver;
-	color:white;
-	padding:5px;	
-	font-size:35px;
-	color:purple;
-}
-/*Form Styles*/
-div.formRow {
-		font-family:sans-serif;
-	display: flex; 
-	flex-flow: row wrap;
-	margin: 15px 10px ;
-	text-align:left;
-}
-div.formRow > * { 
-	flex: 1 1 150px; 
-
-}
-textarea {
-	margin-top: 10px; 
-	height: 100px; 
-	width: 95%;
-} 
-
-
-/* Footer Styles */
-footer  {
-	background-image:url(footer_background.png);
-	background-color: rgb(222,128,60); 
-	color: white; 
-	font: normal small-caps bold 1.2em/2em
-		papyrus, sans-serif;
-	text-align: center; 
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	text-align:center;
-	border-top:5px ridge silver;
-}
-
-
-/* Responsive presentation */
-body {
-	max-width: 1500px;
-	margin: 0 auto;
-	overflow-wrap: break-word;
-}
-
-article,
-section,
-aside,
-nav {
-	min-width: 0;
-}
-
 article {
-	padding: 16px;
+  min-height: 100%;
+  padding: clamp(22px, 4vw, 42px);
+  background: linear-gradient(rgba(8, 9, 26, .76), rgba(25, 12, 43, .88)), url("Castle_background.png") center 42% / cover;
+  text-align: left;
 }
-
+article h1, article h2 { margin-bottom: .7rem; }
+article h2 { margin-top: 1.6rem; color: var(--cyan); }
+aside, nav.vertical {
+  padding: 22px 18px;
+  background: linear-gradient(rgba(12, 11, 33, .76), rgba(26, 11, 48, .9)), url("Planet_Popstar_background.png") center / cover;
+}
+aside h1, nav.vertical h1 { margin-bottom: 18px; font-size: 1.45rem; text-align: center; }
+aside ul, nav.vertical ol { margin: 0; padding-left: 1.4rem; }
+aside li, nav.vertical li { margin: .65rem 0; color: var(--ink); font-size: .98rem; }
+.vertical a { color: var(--cyan); font-family: "Segoe UI", Arial, sans-serif; font-size: .95rem; }
+section {
+  overflow: hidden;
+  padding: clamp(20px, 4vw, 38px);
+  background: linear-gradient(rgba(18, 11, 42, .8), rgba(10, 14, 35, .88)), url("Sunny_background.png") center / cover;
+  color: var(--ink);
+  text-align: center;
+}
+section > strong, section > em, section > strong em {
+  display: block;
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: Papyrus, "Segoe Print", cursive;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
 section img {
-	max-width: 100%;
-	height: auto;
-	padding: 20px;
+  width: min(440px, 100%);
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, .32);
+  border-radius: 16px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, .42);
+}
+.foods {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(5, 7, 20, .78);
+  color: var(--ink);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: .95rem;
+  text-align: left;
+}
+.foods caption { margin-bottom: 18px; font-size: clamp(1.6rem, 4vw, 2.35rem); }
+.foods th, .foods td {
+  padding: 13px 12px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font: inherit;
+  vertical-align: middle;
+}
+.foods thead th, .foods tbody th { background: rgba(185, 156, 255, .17); font-weight: 750; }
+.foods tr:last-child > * { border-bottom: 0; }
+.foods tr > *:last-child { border-right: 0; }
+form { width: min(720px, 100%); margin: 32px auto 0; text-align: left; }
+fieldset {
+  padding: clamp(16px, 4vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(6, 8, 23, .78);
+}
+legend { max-width: 92%; padding: 0 10px; font-size: 1.2rem; }
+.formRow {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin: 14px 0;
+}
+label { color: var(--ink); font-weight: 700; }
+input, textarea, button {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, .09);
+  color: #fff;
+  font: inherit;
+}
+input, textarea { padding: 11px 12px; }
+textarea { min-height: 130px; resize: vertical; }
+#buttons { display: flex; gap: 10px; justify-content: flex-end; margin-top: 14px; }
+#buttons input { width: auto; cursor: pointer; font-weight: 750; }
+#buttons input[type="submit"] { border-color: transparent; background: linear-gradient(135deg, #8a5cff, #e64aa5); }
+footer {
+  padding: 24px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(8, 10, 26, .9) url("footer_background.png") center / cover;
+  color: var(--muted);
+  font-size: .9rem;
+  text-align: center;
+}
+@media (max-width: 860px) {
+  html { background-attachment: scroll; }
+  body { padding: 10px; border-radius: 16px; }
+  nav.horizontal { top: 4px; }
+  .foods { min-width: 690px; }
+  section:has(.foods) { overflow-x: auto; }
+  .refresh-story { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 540px) {
+  body { padding: 6px; border-radius: 10px; }
+  header, nav.horizontal, article, aside, nav.vertical, section, footer { border-radius: 12px; }
+  .horizontal a { min-height: 54px; font-size: .86rem; }
+  article, aside, nav.vertical, section { padding: 17px; }
+  .formRow { grid-template-columns: 1fr; gap: 5px; }
+  #buttons { flex-direction: column; }
+  #buttons input { width: 100%; }
 }
 
-input,
-textarea,
-select,
-button {
-	max-width: 100%;
-	font: inherit;
+/* A respectful, original-inspired comparison mode. */
+body.original-view {
+  font-family: Papyrus, "Segoe Print", cursive;
+  border: 14px ridge silver;
+  border-radius: 30px;
 }
-
-@media (max-width: 800px) {
-	html {
-		background-size: cover;
-	}
-
-	body {
-		margin: 0;
-		padding: 6px;
-		border-width: 6px;
-		border-radius: 0;
-		background-attachment: scroll;
-	}
-
-	header {
-		border-bottom-width: 3px;
-	}
-
-	nav.horizontal {
-		padding: 6px;
-		border-width: 4px;
-	}
-
-	.horizontal a,
-	.horizontal a:hover {
-		display: block;
-		padding: 10px 4px;
-		font-size: 1.15rem;
-		line-height: 1.25;
-		letter-spacing: 0;
-		text-shadow: rgba(0, 0, 0, 0.9) 1px 1px 2px;
-	}
-
-	article {
-		padding: 14px;
-		border-width: 3px;
-		border-radius: 18px;
-		font-size: 1.05rem;
-	}
-
-	h1 {
-		font-size: 1.65rem;
-	}
-
-	h2 {
-		font-size: 1.3rem;
-	}
-
-	aside,
-	nav.vertical {
-		width: auto;
-		margin: 0;
-		padding: 14px;
-		border-width: 3px;
-		border-radius: 16px;
-		font-size: 1rem;
-	}
-
-	aside h1,
-	nav.vertical h1 {
-		margin: 0 0 10px;
-		font-size: 1.6rem;
-		line-height: 1.3;
-	}
-
-	aside ul,
-	nav.vertical ol {
-		margin: 0;
-		padding-left: 28px;
-	}
-
-	aside li,
-	nav.vertical li {
-		font-size: 1rem;
-		line-height: 1.6;
-	}
-
-	.vertical a,
-	.vertical a:hover {
-		font-size: 1rem;
-		line-height: 1.5;
-		letter-spacing: 0;
-	}
-
-	section {
-		padding: 14px;
-		border-width: 3px;
-		font-size: 1.1rem;
-		overflow-x: auto;
-	}
-
-	section img {
-		display: block;
-		margin: 0 auto;
-		padding: 8px;
-	}
-
-	.foods {
-		display: block;
-		width: 100%;
-		min-width: 650px;
-		overflow-x: auto;
-		border-width: 5px;
-		font-size: 1rem;
-	}
-
-	th,
-	td {
-		padding: 6px;
-		border-width: 2px;
-		font-size: 0.9rem;
-	}
-
-	#custInfo {
-		padding: 8px;
-		font-size: 1rem;
-	}
-
-	div.formRow {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 5px;
-		margin: 12px 0;
-	}
-
-	div.formRow > * {
-		width: 100%;
-		min-width: 0;
-	}
-
-	footer {
-		padding: 12px 8px;
-		font-size: 0.9rem;
-		line-height: 1.6;
-		border-top-width: 3px;
-	}
+body.original-view nav.horizontal,
+body.original-view article,
+body.original-view aside,
+body.original-view nav.vertical,
+body.original-view section,
+body.original-view footer {
+  border: 5px ridge silver;
 }
-
-@media (max-width: 480px) {
-	.horizontal a,
-	.horizontal a:hover {
-		font-size: 1rem;
-	}
-
-	article,
-	section {
-		padding: 10px;
-	}
-
-	.foods {
-		min-width: 560px;
-	}
+body.original-view article { text-align: center; }
+body.original-view .horizontal a { font-family: Papyrus, "Segoe Print", cursive; font-size: 1.15rem; }
+body.original-view .refresh-story { border: 5px ridge silver; background: rgba(5, 5, 10, .88); }
+body.original-view .foods,
+body.original-view .foods th,
+body.original-view .foods td { font-family: Papyrus, "Segoe Print", cursive; border-width: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
