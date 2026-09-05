@@ -23,8 +23,6 @@ article { grid-area: main; }
 aside { grid-area: hobbies; }
 section { grid-area: feature; }
 footer { grid-area: footer; }
-.refresh-story { grid-column: 1 / -1; grid-row: 3; }
-#home body { grid-template-areas: "header header header" "links links links" ". . ." "favorites main hobbies" "feature feature feature" "footer footer footer"; }
 header img, section img { display: block; max-width: 100%; height: auto; }
 nav.horizontal ul {
   display: grid;
@@ -46,11 +44,6 @@ nav.vertical, aside, article, section { min-width: 0; }
     margin: 10px auto;
     gap: 12px;
   }
-  #home body {
-    grid-template-areas:
-      "header header" "links links" ". ." "main main"
-      "favorites hobbies" "feature feature" "footer footer";
-  }
   nav.horizontal ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
@@ -62,9 +55,5 @@ nav.vertical, aside, article, section { min-width: 0; }
     width: calc(100% - 12px);
     margin: 6px auto;
   }
-  #home body {
-    grid-template-areas:
-      "header" "links" "." "main" "hobbies" "favorites" "feature" "footer";
-  }
-  nav.horizontal ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  nav.horizontal ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }

@@ -55,64 +55,34 @@ nav.horizontal {
   position: sticky;
   top: 8px;
   z-index: 10;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(7, 9, 24, .93) url("footer_background.png") center / cover;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, .3);
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 14px;
+  background: rgba(7, 9, 24, .92);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .26);
   backdrop-filter: blur(12px);
-}
-.refresh-story {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 22px 26px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: linear-gradient(120deg, rgba(110, 245, 239, .11), rgba(255, 120, 209, .11));
-}
-.refresh-story h1 { margin: 0 0 6px; font-size: clamp(1.35rem, 3vw, 1.9rem); }
-.refresh-story p { margin: 0; }
-.refresh-story .eyebrow {
-  margin-bottom: 5px;
-  color: var(--cyan);
-  font-size: .72rem;
-  font-weight: 800;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-.view-switch { display: flex; flex: 0 0 auto; gap: 8px; }
-.view-switch button {
-  width: auto;
-  padding: 10px 13px;
-  cursor: pointer;
-  font-size: .85rem;
-  font-weight: 750;
-}
-.view-switch button.active {
-  border-color: transparent;
-  background: linear-gradient(135deg, #7250e8, #ce4398);
 }
 .horizontal a {
   display: flex;
-  min-height: 62px;
+  min-height: 48px;
+  gap: 8px;
   align-items: center;
   justify-content: center;
   border: 1px solid transparent;
   border-radius: 11px;
   color: #fff;
   font-family: "Segoe UI", Arial, sans-serif;
-  font-size: .94rem;
+  font-size: .9rem;
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
+.horizontal a br { display: none; }
 .horizontal a:hover, .horizontal a:focus-visible, .horizontal a[aria-current="page"] {
-  transform: translateY(-2px);
-  border-color: rgba(110, 245, 239, .55);
-  background: rgba(255, 255, 255, .12);
+  transform: translateY(-1px);
+  border-color: rgba(110, 245, 239, .4);
+  background: rgba(110, 245, 239, .09);
 }
 article, aside, nav.vertical, section {
   border: 1px solid var(--line);
@@ -225,7 +195,6 @@ footer {
   nav.horizontal { top: 4px; }
   .foods { min-width: 690px; }
   section:has(.foods) { overflow-x: auto; }
-  .refresh-story { align-items: flex-start; flex-direction: column; }
 }
 @media (max-width: 540px) {
   body { padding: 6px; border-radius: 10px; }
@@ -237,26 +206,6 @@ footer {
   #buttons input { width: 100%; }
 }
 
-/* A respectful, original-inspired comparison mode. */
-body.original-view {
-  font-family: Papyrus, "Segoe Print", cursive;
-  border: 14px ridge silver;
-  border-radius: 30px;
-}
-body.original-view nav.horizontal,
-body.original-view article,
-body.original-view aside,
-body.original-view nav.vertical,
-body.original-view section,
-body.original-view footer {
-  border: 5px ridge silver;
-}
-body.original-view article { text-align: center; }
-body.original-view .horizontal a { font-family: Papyrus, "Segoe Print", cursive; font-size: 1.15rem; }
-body.original-view .refresh-story { border: 5px ridge silver; background: rgba(5, 5, 10, .88); }
-body.original-view .foods,
-body.original-view .foods th,
-body.original-view .foods td { font-family: Papyrus, "Segoe Print", cursive; border-width: 3px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }

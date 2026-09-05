@@ -21,15 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     footer.innerHTML = "<strong>The Delliber Family</strong><br>Our original family website, refreshed with the same artwork and memories.<br><span>Artwork by Dominic Delliber &middot; Website by Kenneth Delliber Jr.</span>";
   }
 
-  const viewButtons = document.querySelectorAll("[data-view]");
-  viewButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const original = button.dataset.view === "original";
-      document.body.classList.toggle("original-view", original);
-      viewButtons.forEach((item) => item.classList.toggle("active", item === button));
-    });
-  });
-
   const form = document.querySelector("#survey");
   if (form) {
     form.addEventListener("submit", (event) => {
